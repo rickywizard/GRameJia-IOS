@@ -15,6 +15,7 @@
 		058281512C50822700269671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058281502C50822700269671 /* Assets.xcassets */; };
 		058281542C50822700269671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058281522C50822700269671 /* LaunchScreen.storyboard */; };
 		0582815C2C508F7D00269671 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582815B2C508F7D00269671 /* LoginViewController.swift */; };
+		0582815E2C50954D00269671 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582815D2C50954D00269671 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		058281532C50822700269671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058281552C50822700269671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0582815B2C508F7D00269671 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0582815D2C50954D00269671 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		058281432C50822600269671 /* GRameJia Book */ = {
 			isa = PBXGroup;
 			children = (
+				0582815D2C50954D00269671 /* RegisterViewController.swift */,
 				0582815B2C508F7D00269671 /* LoginViewController.swift */,
 				058281442C50822600269671 /* AppDelegate.swift */,
 				058281462C50822600269671 /* SceneDelegate.swift */,
@@ -147,6 +150,7 @@
 				0582814F2C50822600269671 /* GRameJia_Book.xcdatamodeld in Sources */,
 				058281492C50822600269671 /* ViewController.swift in Sources */,
 				058281452C50822600269671 /* AppDelegate.swift in Sources */,
+				0582815E2C50954D00269671 /* RegisterViewController.swift in Sources */,
 				0582815C2C508F7D00269671 /* LoginViewController.swift in Sources */,
 				058281472C50822600269671 /* SceneDelegate.swift in Sources */,
 			);
