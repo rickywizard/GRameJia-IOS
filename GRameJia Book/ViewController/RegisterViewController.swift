@@ -57,6 +57,52 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        if password != confPassword {
+            showAlert(title: "Wrong password confirmation", message: "Password and confirm password must be same")
+            return
+        }
+        
+        if checkIfEmailExists(email: email) {
+            showAlert(title: "Email already taken", message: "This email already taken by other user")
+            return
+        }
+        
+        // Pass all validation
+        saveUserToCoreData(name: name, email: email, password: password)
+    }
+    
+    func checkIfEmailExists(email: String) -> Bool {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "email == %@", email)
+        
+        do {
+            let users = try context.fetch(fetchRequest)
+            return !users.isEmpty
+        } catch {
+            showAlert(title: "Error", message: "Failed to fetch user data.")
+            return true
+        }
+    }
+    
+    func saveUserToCoreData(name: String, email: String, password: String) {
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)!
+        let newUser = NSManagedObject(entity: entity, insertInto: context)
+        newUser.setValue(name, forKey: "name")
+        newUser.setValue(email, forKey: "email")
+        newUser.setValue(password, forKey: "password")
+        newUser.setValue("user", forKey: "role")
+        newUser.setValue(2000000, forKey: "balance")
+        
+        do {
+            try context.save()
+            
+            if let nextPage = storyboard?.instantiateViewController(withIdentifier: "loginView") as? LoginViewController {
+                self.navigationController?.pushViewController(nextPage, animated: true)
+                showAlert(title: "Registration Successful", message: "You can login using you account now")
+            }
+        } catch {
+            showAlert(title: "Error", message: "Failed to save user data.")
+        }
     }
     
     func showAlert(title: String, message: String) {

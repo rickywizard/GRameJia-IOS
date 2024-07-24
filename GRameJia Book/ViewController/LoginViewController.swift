@@ -24,17 +24,7 @@ class LoginViewController: UIViewController {
     }
     
     func initDummy() {
-        // Fetch request untuk menghapus semua data yang ada
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        
         do {
-            let users = try context.fetch(fetchRequest)
-            
-            for user in users {
-                context.delete(user) // Hapus setiap objek user
-            }
-            
-            // Tambahkan dua user sekaligus
             let entityTarget = NSEntityDescription.entity(forEntityName: "User", in: context)
             if let entity = entityTarget {
                 // User pertama
