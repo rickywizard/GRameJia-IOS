@@ -11,4 +11,5 @@ struct user {
     var email: String
     var name: String
     var password: String
+    var role: String
 }

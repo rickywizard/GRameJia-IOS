@@ -17,6 +17,9 @@
 		0582815C2C508F7D00269671 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582815B2C508F7D00269671 /* LoginViewController.swift */; };
 		0582815E2C50954D00269671 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582815D2C50954D00269671 /* RegisterViewController.swift */; };
 		05B025092C50A56A00E8EB99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B025082C50A56A00E8EB99 /* User.swift */; };
+		05B0250C2C50ABDF00E8EB99 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0250B2C50ABDF00E8EB99 /* TabBarController.swift */; };
+		05B0250E2C50AE1100E8EB99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0250D2C50AE1100E8EB99 /* HomeViewController.swift */; };
+		05B025102C50B86B00E8EB99 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0250F2C50B86B00E8EB99 /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		0582815B2C508F7D00269671 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0582815D2C50954D00269671 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		05B025082C50A56A00E8EB99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		05B0250B2C50ABDF00E8EB99 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		05B0250D2C50AE1100E8EB99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		05B0250F2C50B86B00E8EB99 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +70,10 @@
 		058281432C50822600269671 /* GRameJia Book */ = {
 			isa = PBXGroup;
 			children = (
+				05B0250A2C50A78400E8EB99 /* ViewController */,
 				05B025072C50A53D00E8EB99 /* Model */,
-				0582815D2C50954D00269671 /* RegisterViewController.swift */,
-				0582815B2C508F7D00269671 /* LoginViewController.swift */,
 				058281442C50822600269671 /* AppDelegate.swift */,
 				058281462C50822600269671 /* SceneDelegate.swift */,
-				058281482C50822600269671 /* ViewController.swift */,
 				0582814A2C50822600269671 /* Main.storyboard */,
 				058281502C50822700269671 /* Assets.xcassets */,
 				058281522C50822700269671 /* LaunchScreen.storyboard */,
@@ -85,6 +89,19 @@
 				05B025082C50A56A00E8EB99 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05B0250A2C50A78400E8EB99 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0582815D2C50954D00269671 /* RegisterViewController.swift */,
+				0582815B2C508F7D00269671 /* LoginViewController.swift */,
+				058281482C50822600269671 /* ViewController.swift */,
+				05B0250B2C50ABDF00E8EB99 /* TabBarController.swift */,
+				05B0250D2C50AE1100E8EB99 /* HomeViewController.swift */,
+				05B0250F2C50B86B00E8EB99 /* AdminViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +180,10 @@
 				058281452C50822600269671 /* AppDelegate.swift in Sources */,
 				0582815E2C50954D00269671 /* RegisterViewController.swift in Sources */,
 				0582815C2C508F7D00269671 /* LoginViewController.swift in Sources */,
+				05B0250E2C50AE1100E8EB99 /* HomeViewController.swift in Sources */,
 				058281472C50822600269671 /* SceneDelegate.swift in Sources */,
+				05B0250C2C50ABDF00E8EB99 /* TabBarController.swift in Sources */,
+				05B025102C50B86B00E8EB99 /* AdminViewController.swift in Sources */,
 				05B025092C50A56A00E8EB99 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
