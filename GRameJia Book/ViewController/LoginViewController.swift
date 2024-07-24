@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     var context: NSManagedObjectContext!
 
     override func viewDidLoad() {
-        self.navigationItem.hidesBackButton = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         super.viewDidLoad()
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
