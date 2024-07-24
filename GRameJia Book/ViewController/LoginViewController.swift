@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
                 newUser1.setValue("Admin", forKey: "name")
                 newUser1.setValue("admin123", forKey: "password")
                 newUser1.setValue("admin", forKey: "role")
+                newUser1.setValue(0, forKey: "balance")
                 
                 // User kedua
                 let newUser2 = NSManagedObject(entity: entity, insertInto: context)
@@ -50,9 +51,9 @@ class LoginViewController: UIViewController {
                 newUser2.setValue("Tes", forKey: "name")
                 newUser2.setValue("tes123", forKey: "password")
                 newUser2.setValue("user", forKey: "role")
+                newUser2.setValue(2000000, forKey: "balance")
                 
                 try context.save()
-                print("Dummy data reset successful.")
             } else {
                 showAlert(title: "Error", message: "Entity description not found.")
             }
@@ -68,12 +69,17 @@ class LoginViewController: UIViewController {
     @IBAction func onLoginBtnClick(_ sender: Any) {
         
         guard let email = emailField.text, !email.isEmpty else {
-            showAlert(title:"Email is empty",message: "Email must not be empty.")
+            showAlert(title:"Email is empty", message: "Email must not be empty.")
             return
         }
         
         guard let password = passwordField.text, !password.isEmpty else {
-            showAlert(title:"Password is empty",message: "Password must not be empty.")
+            showAlert(title:"Password is empty", message: "Password must not be empty.")
+            return
+        }
+        
+        guard let email = emailField.text, email.hasSuffix(".com") && email.contains("@") else {
+            showAlert(title: "Email must be valid", message: "Email must contain '@' and ends with \".com\"")
             return
         }
         
