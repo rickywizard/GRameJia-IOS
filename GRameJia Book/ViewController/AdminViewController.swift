@@ -110,7 +110,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             bookTable.reloadData()
         } catch {
-            print("Error fetching game data")
+            print("Error fetching book data")
         }
     }
 

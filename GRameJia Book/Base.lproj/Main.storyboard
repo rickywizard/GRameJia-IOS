@@ -745,7 +745,7 @@
         <!--Home-->
         <scene sceneID="jtY-nl-0Td">
             <objects>
-                <viewController id="7JG-Mw-cEU" sceneMemberID="viewController">
+                <viewController id="7JG-Mw-cEU" customClass="HomeViewController" customModule="GRameJia_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Han-sc-Xfk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -768,7 +768,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="205" id="nDv-6U-0XK" customClass="HomeTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellBook" rowHeight="205" id="nDv-6U-0XK" customClass="HomeTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="392" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nDv-6U-0XK" id="KCs-xz-pt9">
@@ -813,6 +813,9 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Add to cart">
                                                         <color key="baseBackgroundColor" red="0.1198061779" green="0.36474069949999999" blue="0.6603389382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="onAddToCartBtnClick:" destination="nDv-6U-0XK" eventType="touchUpInside" id="SAi-1l-ZL1"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -833,6 +836,13 @@
                                                 <constraint firstItem="hv9-nT-ggl" firstAttribute="leading" secondItem="QNM-Zb-vx4" secondAttribute="trailing" constant="20" id="o0B-jV-5TZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookAuthor" destination="tj4-IX-6k8" id="xJz-7v-Uof"/>
+                                            <outlet property="bookImage" destination="QNM-Zb-vx4" id="V11-hh-XgH"/>
+                                            <outlet property="bookPrice" destination="8im-ad-gwl" id="7op-eE-tMh"/>
+                                            <outlet property="bookPublisher" destination="e6H-sE-eb5" id="S21-bd-0w4"/>
+                                            <outlet property="bookTitle" destination="hv9-nT-ggl" id="Gqq-t1-M2l"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -847,6 +857,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="ILh-vu-DYj"/>
+                    <connections>
+                        <outlet property="bookTable" destination="gXa-HR-OdB" id="l3z-9q-Gqk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJe-CG-nfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

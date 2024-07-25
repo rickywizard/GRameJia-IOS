@@ -19,5 +19,21 @@ class HomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBOutlet weak var bookImage: UIImageView!
 
+    @IBOutlet weak var bookTitle: UILabel!
+    
+    @IBOutlet weak var bookAuthor: UILabel!
+    
+    @IBOutlet weak var bookPublisher: UILabel!
+    
+    @IBOutlet weak var bookPrice: UILabel!
+    
+    @IBAction func onAddToCartBtnClick(_ sender: Any) {
+        self.handleInsert()
+    }
+    
+    var handleInsert = {}
+    
 }
