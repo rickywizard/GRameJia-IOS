@@ -52,7 +52,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         // navigate to update page
         cell.toUpdate = {
             if let nextPage = self.storyboard?.instantiateViewController(withIdentifier: "updateView") as? UpdateBookViewController {
-                
+                nextPage.bookData = self.bookList[indexPath.row]
                 self.navigationController?.pushViewController(nextPage, animated: true)
             }
         }

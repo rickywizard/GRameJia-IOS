@@ -648,6 +648,9 @@
                                     <backgroundConfiguration key="background" cornerRadius="0.0"/>
                                     <color key="baseBackgroundColor" red="0.121205546" green="0.3631513119" blue="0.65951246019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onUpdateBtnClick:" destination="vVx-Kv-55J" eventType="touchUpInside" id="4Oc-Qq-zgr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6jN-Yx-pM6"/>
@@ -694,6 +697,13 @@
                             <constraint firstItem="yyz-1L-HPc" firstAttribute="centerX" secondItem="cZF-Dc-Y34" secondAttribute="centerX" id="z5x-wy-KSP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorField" destination="guU-yv-gnj" id="7UL-fe-Kqc"/>
+                        <outlet property="imageField" destination="5zN-p7-cNb" id="a7L-KK-gOt"/>
+                        <outlet property="priceField" destination="PsK-RF-a2X" id="d1N-wj-1um"/>
+                        <outlet property="publisherField" destination="g4Q-Qa-Fbk" id="fLD-BE-rQN"/>
+                        <outlet property="titleField" destination="yyz-1L-HPc" id="GOg-36-7mP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33F-4p-o08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
