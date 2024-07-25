@@ -172,7 +172,6 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         do {
             let fetchedBooks = try context.fetch(fetchRequest)
             if let bookData = fetchedBooks.first {
-                // Assuming you have some way to store or display these details
                 cartList.append(book(
                     title: bookTitle,
                     author: bookData.author!,

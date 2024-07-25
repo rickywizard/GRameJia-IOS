@@ -506,8 +506,8 @@
                                     <constraint firstAttribute="width" constant="130" id="bot-JP-Ubv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-RL-Mtt">
-                                <rect key="frame" x="175" y="126" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-RL-Mtt">
+                                <rect key="frame" x="175" y="126" width="202" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -539,7 +539,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="4y7-l7-aYI" customClass="HistoryTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellHistory" rowHeight="139" id="4y7-l7-aYI" customClass="HistoryTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4y7-l7-aYI" id="NnD-hM-qDO">
@@ -592,6 +592,13 @@
                                                 <constraint firstItem="61q-7i-Sck" firstAttribute="leading" secondItem="zfP-TW-Kce" secondAttribute="trailing" constant="20" id="tlz-TM-xFd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookAuthor" destination="emn-NJ-HHI" id="r7f-SI-Fou"/>
+                                            <outlet property="bookImage" destination="zfP-TW-Kce" id="opH-bZ-ckb"/>
+                                            <outlet property="bookPrice" destination="RSM-85-6fU" id="wb2-KM-VT8"/>
+                                            <outlet property="bookPublisher" destination="61q-7i-Sck" id="yZh-36-BlW"/>
+                                            <outlet property="bookTitle" destination="KOJ-Ao-qYl" id="zBV-Cr-vPT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -621,6 +628,12 @@
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="person" catalog="system" id="pzQ-Ff-0at">
                         <imageReference key="image" image="person" catalog="system"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="balanceLabel" destination="eN1-Xa-4Hk" id="Buo-eL-wYJ"/>
+                        <outlet property="emailLabel" destination="TCs-Kj-y8Q" id="OOd-bh-KDs"/>
+                        <outlet property="historyTable" destination="1S7-Lh-jyK" id="YVp-NP-l9r"/>
+                        <outlet property="nameLabel" destination="8TV-RL-Mtt" id="u35-So-MeY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9E-rD-h2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
