@@ -1,25 +1,18 @@
 //
-//  HomeTabBarController.swift
+//  ProfileViewController.swift
 //  GRameJia Book
 //
-//  Created by prk on 7/24/24.
+//  Created by prk on 7/25/24.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
-    
-    var emailCurrent: String = ""
-    var nameCurrent: String = ""
-    var balanceCurrent: Int = 0
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        print(emailCurrent)
-//        print(nameCurrent)
     }
     
 

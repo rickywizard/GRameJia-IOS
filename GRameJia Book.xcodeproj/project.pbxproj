@@ -27,6 +27,7 @@
 		05F347332C522A370028C29C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347322C522A370028C29C /* CartTableViewCell.swift */; };
 		05F347352C522A4B0028C29C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */; };
 		05F347372C5240210028C29C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347362C5240210028C29C /* CartViewController.swift */; };
+		05F347392C5251130028C29C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347382C5251130028C29C /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		05F347322C522A370028C29C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		05F347362C5240210028C29C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		05F347382C5251130028C29C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				05F347322C522A370028C29C /* CartTableViewCell.swift */,
 				05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */,
 				05F347362C5240210028C29C /* CartViewController.swift */,
+				05F347382C5251130028C29C /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				058281452C50822600269671 /* AppDelegate.swift in Sources */,
 				05F3472F2C520AAC0028C29C /* AdminTableViewCell.swift in Sources */,
 				05B025122C50D8FA00E8EB99 /* AddBookViewController.swift in Sources */,
+				05F347392C5251130028C29C /* ProfileViewController.swift in Sources */,
 				0582815E2C50954D00269671 /* RegisterViewController.swift in Sources */,
 				0582815C2C508F7D00269671 /* LoginViewController.swift in Sources */,
 				05B0250E2C50AE1100E8EB99 /* HomeViewController.swift in Sources */,

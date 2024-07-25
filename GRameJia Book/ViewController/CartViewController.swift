@@ -41,7 +41,37 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var totalPriceLabel: UILabel!
     
     @IBAction func onCheckoutBtnClick(_ sender: Any) {
-        
+        let tabBar = tabBarController as! TabBarController
+            
+        let userEmail = tabBar.emailCurrent
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "email == %@", userEmail)
+            
+        do {
+            let users = try context.fetch(fetchRequest)
+            if let user = users.first {
+                if user.balance >= Int(totalPrice) {
+                    user.balance -= Int64(totalPrice)
+                    
+                    // Move items from Cart to History
+                    moveItemsToHistory(for: userEmail)
+                    
+                    try context.save()
+                    
+                    cartList.removeAll()
+                    updatePrice()
+                    cartTable.reloadData()
+                    
+                    showAlert(title: "Checkout Successful", message: "Items checked out successfully.")
+                } else {
+                    showAlert(title: "Insufficient Balance", message: "Your balance is not sufficient to complete the checkout.")
+                }
+            } else {
+                showAlert(title: "User Not Found", message: "User with current email not found.")
+            }
+        } catch {
+            showAlert(title: "Error", message: "Failed to checkout.")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,6 +123,24 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    func moveItemsToHistory(for userEmail: String) {
+        let fetchRequest: NSFetchRequest<Cart> = Cart.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "userEmail == %@", userEmail)
+        
+        do {
+            let fetchedCarts = try context.fetch(fetchRequest)
+            for cart in fetchedCarts {
+                let historyItem = History(context: context)
+                historyItem.userEmail = cart.userEmail
+                historyItem.bookTitle = cart.bookTitle
+                
+                context.delete(cart)
+            }
+        } catch {
+            showAlert(title: "Error", message: "Failed to move items to history.")
+        }
     }
     
     func fetchCartByEmail() {
