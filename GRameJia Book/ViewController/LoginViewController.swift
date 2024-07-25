@@ -91,7 +91,6 @@ class LoginViewController: UIViewController {
                     if let nextPage = storyboard?.instantiateViewController(withIdentifier: "tabBarView") as? TabBarController {
                         nextPage.emailCurrent = user.email!
                         nextPage.nameCurrent = user.name!
-                        nextPage.balanceCurrent = Int(user.balance)
                         self.navigationController?.pushViewController(nextPage, animated: true)
                         showAlert(title: "Login Successful", message: "Welcome, \(user.name!)")
                     }

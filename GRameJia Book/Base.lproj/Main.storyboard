@@ -494,7 +494,7 @@
         <!--Profile-->
         <scene sceneID="BuJ-0R-9H2">
             <objects>
-                <viewController id="Gzb-6Z-8OE" sceneMemberID="viewController">
+                <viewController id="Gzb-6Z-8OE" customClass="ProfileViewController" customModule="GRameJia_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vgX-y9-PNx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

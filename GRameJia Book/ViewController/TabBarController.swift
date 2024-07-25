@@ -11,7 +11,6 @@ class TabBarController: UITabBarController {
     
     var emailCurrent: String = ""
     var nameCurrent: String = ""
-    var balanceCurrent: Int = 0
 
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
