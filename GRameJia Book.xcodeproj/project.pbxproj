@@ -23,6 +23,9 @@
 		05B025122C50D8FA00E8EB99 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B025112C50D8FA00E8EB99 /* AddBookViewController.swift */; };
 		05B025142C50D91200E8EB99 /* UpdateBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B025132C50D91200E8EB99 /* UpdateBookViewController.swift */; };
 		05F3472F2C520AAC0028C29C /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3472E2C520AAC0028C29C /* AdminTableViewCell.swift */; };
+		05F347312C522A290028C29C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347302C522A290028C29C /* HomeTableViewCell.swift */; };
+		05F347332C522A370028C29C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347322C522A370028C29C /* CartTableViewCell.swift */; };
+		05F347352C522A4B0028C29C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		05B025112C50D8FA00E8EB99 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		05B025132C50D91200E8EB99 /* UpdateBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBookViewController.swift; sourceTree = "<group>"; };
 		05F3472E2C520AAC0028C29C /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
+		05F347302C522A290028C29C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		05F347322C522A370028C29C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				05B025112C50D8FA00E8EB99 /* AddBookViewController.swift */,
 				05B025132C50D91200E8EB99 /* UpdateBookViewController.swift */,
 				05F3472E2C520AAC0028C29C /* AdminTableViewCell.swift */,
+				05F347302C522A290028C29C /* HomeTableViewCell.swift */,
+				05F347322C522A370028C29C /* CartTableViewCell.swift */,
+				05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 			files = (
 				0582814F2C50822600269671 /* GRameJia_Book.xcdatamodeld in Sources */,
 				058281492C50822600269671 /* ViewController.swift in Sources */,
+				05F347312C522A290028C29C /* HomeTableViewCell.swift in Sources */,
 				058281452C50822600269671 /* AppDelegate.swift in Sources */,
 				05F3472F2C520AAC0028C29C /* AdminTableViewCell.swift in Sources */,
 				05B025122C50D8FA00E8EB99 /* AddBookViewController.swift in Sources */,
@@ -193,8 +203,10 @@
 				0582815C2C508F7D00269671 /* LoginViewController.swift in Sources */,
 				05B0250E2C50AE1100E8EB99 /* HomeViewController.swift in Sources */,
 				058281472C50822600269671 /* SceneDelegate.swift in Sources */,
+				05F347352C522A4B0028C29C /* HistoryTableViewCell.swift in Sources */,
 				05B0250C2C50ABDF00E8EB99 /* TabBarController.swift in Sources */,
 				05B025102C50B86B00E8EB99 /* AdminViewController.swift in Sources */,
+				05F347332C522A370028C29C /* CartTableViewCell.swift in Sources */,
 				05B025142C50D91200E8EB99 /* UpdateBookViewController.swift in Sources */,
 				05B025092C50A56A00E8EB99 /* Book.swift in Sources */,
 			);
