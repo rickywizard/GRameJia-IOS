@@ -38,6 +38,39 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var balanceLabel: UILabel!
     
+    @IBOutlet weak var topUpField: UITextField!
+    
+    @IBAction func onTopUpBtnClick(_ sender: Any) {
+        guard let topUpAmountString = topUpField.text, !topUpAmountString.isEmpty, let topUpAmount = Int(topUpAmountString) else {
+            showAlert(title: "Invalid Amount", message: "Please enter a valid amount to top up.")
+            return
+        }
+        
+        let tabBar = tabBarController as! TabBarController
+            
+        let userEmail = tabBar.emailCurrent
+
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "email == %@", userEmail)
+            
+        do {
+            let users = try context.fetch(fetchRequest)
+            if let user = users.first {
+                user.balance += Int64(topUpAmount)
+                    
+                try context.save()
+                    
+                balanceLabel.text = "Rp \(user.balance)"
+                    
+                showAlert(title: "Top Up Successful", message: "Your balance has been topped up by Rp \(topUpAmount).")
+                    
+                topUpField.text = ""
+            }
+        } catch {
+            showAlert(title: "Top Up Error", message: "Please try again later")
+        }
+    }
+    
     @IBOutlet weak var historyTable: UITableView!
     
     var historyList = [book]()
@@ -123,6 +156,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         } catch {
             print("Failed to fetch book details.")
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
 }
