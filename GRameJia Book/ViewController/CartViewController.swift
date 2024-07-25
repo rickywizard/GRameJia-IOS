@@ -78,8 +78,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
                 try context.save()
                 
-                fetchCartByEmail()
+                cartList.remove(at: indexPath.row)
                 updatePrice()
+                cartTable.reloadData()
             } catch {
                 print("Error deleting book")
             }
