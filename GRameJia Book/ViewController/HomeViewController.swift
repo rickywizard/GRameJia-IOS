@@ -63,7 +63,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 self.showAlert(title: "Added to Cart", message: "Book is added to your cart successfully")
             } catch {
-                self.showAlert(title: "Error", message: "Failed to save cart data.")
+                self.showAlert(title: "Error", message: "Failed add to cart")
             }
         }
         

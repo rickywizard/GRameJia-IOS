@@ -530,6 +530,9 @@
                                 <color key="tintColor" red="0.82538014650000002" green="0.27961289880000001" blue="0.14957082269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <segue destination="MEH-q3-eCd" kind="show" id="CSq-rb-snD"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1S7-Lh-jyK">
                                 <rect key="frame" x="0.0" y="277" width="393" height="492"/>
@@ -626,7 +629,7 @@
         <!--Cart-->
         <scene sceneID="Nnh-oM-eEv">
             <objects>
-                <viewController id="dEf-nR-yox" sceneMemberID="viewController">
+                <viewController id="dEf-nR-yox" customClass="CartViewController" customModule="GRameJia_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xxj-Gr-9Bv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -647,7 +650,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="iZF-hY-Aq0" customClass="CartTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCart" rowHeight="139" id="iZF-hY-Aq0" customClass="CartTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iZF-hY-Aq0" id="dsi-ty-LRe">
@@ -700,6 +703,13 @@
                                                 <constraint firstItem="EPI-jn-2ef" firstAttribute="leading" secondItem="dsi-ty-LRe" secondAttribute="leading" constant="20" symbolic="YES" id="w7z-OY-WnT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookAuthor" destination="dJV-mj-WZD" id="R3k-pe-BGq"/>
+                                            <outlet property="bookImage" destination="EPI-jn-2ef" id="TjC-dh-MDw"/>
+                                            <outlet property="bookPrice" destination="Ixl-UN-Xho" id="M0Q-Ns-P1e"/>
+                                            <outlet property="bookPublisher" destination="Y9b-vA-gxz" id="TT5-vH-cie"/>
+                                            <outlet property="bookTitle" destination="rDt-YA-N4q" id="0cd-Lc-I91"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -711,6 +721,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Checkout">
                                     <color key="baseBackgroundColor" red="0.1198061779" green="0.36474069949999999" blue="0.6603389382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onCheckoutBtnClick:" destination="dEf-nR-yox" eventType="touchUpInside" id="z5h-Ny-r9P"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfM-XI-hVh">
                                 <rect key="frame" x="16" y="732" width="42" height="21"/>
@@ -718,8 +731,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp500000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbz-aA-yHu">
-                                <rect key="frame" x="66" y="732" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbz-aA-yHu">
+                                <rect key="frame" x="66" y="732" width="31" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -737,6 +750,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" image="cart" catalog="system" selectedImage="cart" id="IUy-80-M86"/>
+                    <connections>
+                        <outlet property="cartTable" destination="voS-jI-vZI" id="4Ym-VK-uop"/>
+                        <outlet property="totalPriceLabel" destination="cbz-aA-yHu" id="X94-64-yXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAu-HD-reF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -768,7 +785,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellBook" rowHeight="205" id="nDv-6U-0XK" customClass="HomeTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellBooks" rowHeight="205" id="nDv-6U-0XK" customClass="HomeTableViewCell" customModule="GRameJia_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="392" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nDv-6U-0XK" id="KCs-xz-pt9">
@@ -805,7 +822,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ec-ai-gbB">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ec-ai-gbB">
                                                     <rect key="frame" x="175" y="159" width="197" height="35"/>
                                                     <color key="backgroundColor" red="0.1198061779" green="0.36474069949999999" blue="0.6603389382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" red="0.1198061779" green="0.36474069949999999" blue="0.6603389382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -831,6 +848,7 @@
                                                 <constraint firstItem="1Ec-ai-gbB" firstAttribute="top" secondItem="8im-ad-gwl" secondAttribute="bottom" constant="19" id="bZx-gZ-3vS"/>
                                                 <constraint firstItem="QNM-Zb-vx4" firstAttribute="bottom" secondItem="KCs-xz-pt9" secondAttribute="bottomMargin" id="bqw-P7-DUc"/>
                                                 <constraint firstItem="e6H-sE-eb5" firstAttribute="leading" secondItem="QNM-Zb-vx4" secondAttribute="trailing" constant="20" id="dfK-0v-aiK"/>
+                                                <constraint firstItem="1Ec-ai-gbB" firstAttribute="trailing" secondItem="KCs-xz-pt9" secondAttribute="trailingMargin" id="hSS-tE-X5n"/>
                                                 <constraint firstItem="tj4-IX-6k8" firstAttribute="leading" secondItem="QNM-Zb-vx4" secondAttribute="trailing" constant="20" id="mlA-RK-U2c"/>
                                                 <constraint firstItem="hv9-nT-ggl" firstAttribute="leading" secondItem="QNM-Zb-vx4" secondAttribute="trailing" constant="20" id="nTX-TK-bSh"/>
                                                 <constraint firstItem="hv9-nT-ggl" firstAttribute="leading" secondItem="QNM-Zb-vx4" secondAttribute="trailing" constant="20" id="o0B-jV-5TZ"/>
@@ -1169,7 +1187,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hNg-8u-qBd"/>
+        <segue reference="CSq-rb-snD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>

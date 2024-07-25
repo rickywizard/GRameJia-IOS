@@ -26,6 +26,7 @@
 		05F347312C522A290028C29C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347302C522A290028C29C /* HomeTableViewCell.swift */; };
 		05F347332C522A370028C29C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347322C522A370028C29C /* CartTableViewCell.swift */; };
 		05F347352C522A4B0028C29C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */; };
+		05F347372C5240210028C29C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F347362C5240210028C29C /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		05F347302C522A290028C29C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		05F347322C522A370028C29C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		05F347362C5240210028C29C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				05F347302C522A290028C29C /* HomeTableViewCell.swift */,
 				05F347322C522A370028C29C /* CartTableViewCell.swift */,
 				05F347342C522A4B0028C29C /* HistoryTableViewCell.swift */,
+				05F347362C5240210028C29C /* CartViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				05F347352C522A4B0028C29C /* HistoryTableViewCell.swift in Sources */,
 				05B0250C2C50ABDF00E8EB99 /* TabBarController.swift in Sources */,
 				05B025102C50B86B00E8EB99 /* AdminViewController.swift in Sources */,
+				05F347372C5240210028C29C /* CartViewController.swift in Sources */,
 				05F347332C522A370028C29C /* CartTableViewCell.swift in Sources */,
 				05B025142C50D91200E8EB99 /* UpdateBookViewController.swift in Sources */,
 				05B025092C50A56A00E8EB99 /* Book.swift in Sources */,
